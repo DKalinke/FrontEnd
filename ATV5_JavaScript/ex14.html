@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ex14</title>
-    <input type="text">
-    <button onclick="Guardar">Guardar</button>
+    
     <script>
 
+        function Guardar() {
+            if (nome === "", idade === "") {
+                alert("Por favor, preencha os campos vazios")
+            } else {
+                let nome = document.getElementById("nome").value
+                let idade = document.getElementById("idade").value
+                alert("Seu nome é " + nome + "sua idade é" + idade)
+            }
+
+        }
     </script>
 </head>
+
 <body>
-    
+    Nome:
+    <input type="text" name="nome" id="nome"><br>
+    Idade:
+    <input type="text" name="idade" id="idade">
+    <button onclick="Guardar()">Guardar</button>
 </body>
+
 </html>
